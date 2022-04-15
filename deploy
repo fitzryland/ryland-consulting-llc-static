@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -a --delete --update -P . fitzhug1@fitzhughryland.com:public_html/rylandconsulting

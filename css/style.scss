@@ -1,0 +1,422 @@
+/* style2.scss */
+
+/* COLOR */
+/* BROWNS
+$lightest: #fffef7;
+$light: #A58362;
+$medium: #7F5120;
+$dark: #4F371B;
+*/
+
+$darkBlue: #101437;
+$medBlue: #3C4FCD;
+$lightBlue: #6781FF;
+$lightest: #eef;
+
+/* IMAGES */
+$lbgImg: url('../images/bgLight2.gif');
+$dbgImg: url('../images/bgDark2.gif');
+
+/* DIMENTIONS */
+
+$smallW: 400px;
+$mainW: 800px;
+$bigW: 1200px;
+$borderRadius: 5px;
+
+$navBordW: 2px;
+$headFootBordW: 6px;
+
+* {
+	outline:none;
+	margin:0;padding:0;
+}
+nav, header, section {
+	display:block;
+}
+body {
+	color:$darkBlue;
+	background-color:$darkBlue;
+	font:14px Arial, Helvetica, sans-serif;
+}
+a:link, a:visited {
+	color:$lightBlue;
+	text-decoration:none;
+}
+a:hover, a:active {
+	text-decoration:underline;
+}
+h1 {
+	font-size:2em;
+}
+
+h1, h2, h3 {
+	font-family:Georgia, serif;
+	margin:1em 0;
+}
+p {
+	margin:1em 0 1em 1em;
+	text-indent:1em;
+}
+header {
+	background-color:$lightest;
+	margin:0 auto;
+	overflow:hidden;
+	text-align:center;
+	width:100%;
+	.logo {
+		position:absolute;
+		left:50%;
+		margin:1.3em 0 1em -22em;
+	}
+	h1 {
+		font-weight:normal;
+		font-size:2.4em;
+		a:link, a:visited {
+			color:$darkBlue;
+		}
+		a:hover, a:active {
+			color:$darkBlue;
+			text-decoration:none;
+		}
+	}
+	h1.r {
+		margin:2.5em 0 0 -13em;
+	}
+	h1.c {
+		margin:0 0 0.7em -10em;
+	}
+	.tagline {
+		font-style:italic;
+		left:50%;
+		margin-left:142px;
+		position:absolute;
+		text-align:right;
+		top:100px;
+		width:250px;
+	}
+}
+nav {
+	border-bottom:$headFootBordW solid $medBlue;
+	font:16px Georgia, serif;
+	margin:0;padding:0.5em 0;
+	width:100%;
+	a:hover, a:active {
+		text-decoration:none;
+	}
+	a {
+		border-top:$navBordW solid transparent;
+		border-right:$navBordW solid transparent;
+		border-left:$navBordW solid transparent;
+		padding:0.5em 1.5em;
+	}
+	a:link, a:visited {
+		color:$darkBlue;
+	}
+	a:hover, a:active {
+		color:$medBlue;
+	}
+	.current, a:hover {
+		background-color:white;
+		color:$medBlue;
+		border-top:$navBordW solid $medBlue;
+		border-right:$navBordW solid $medBlue;
+		border-bottom:$headFootBordW solid white;
+		border-left:$navBordW solid $medBlue;
+		position:relative;
+	}
+	a:hover {
+		border-bottom:0px;
+	}
+	/* TODO this is way too sloppy */
+	a.current:hover {
+		border-bottom:$headFootBordW solid white;
+	}
+	.current:after {
+		bottom:0;
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-right:5px solid transparent;
+		border-bottom:10px solid $darkBlue;
+		border-left:5px solid transparent;
+		left: 50%;
+		margin:0 0 -5px -8px;
+	}
+}
+section {
+	background-color:white;
+	overflow:hidden;
+	position:relative;
+	margin:0 auto;padding:1.5em;
+	width:$mainW;
+	img {
+		border:3px double $darkBlue;
+	}
+}
+/******** HOME ********/
+#homeHead {
+	margin:0 0 1em 1em;
+}
+#rotaTesti {
+	float:right;
+	height:12em;
+	margin:1em 0;
+	padding:1em;
+	position:relative;
+	width:274px;
+}
+.quote {
+	position:absolute;
+}
+blockquote {
+	font-style:italic;
+}
+.attribution {
+	margin:1em;
+}
+/******** VALUES ********/
+#socialImg {
+	margin:1em 0;
+}
+#turtleImg {
+	margin:1em 0;
+	width:315px;height:329px;
+}
+h3 {
+	margin-left:0.5em;
+	position:relative;
+}
+.valueQuote {
+	margin:1.5em 0;
+	font-style: italic;
+}
+/******** PRICING ********/
+.rightCol {
+	float:right;
+	height:100%;
+	margin-left:1em;
+	width:320px;
+	p.caption {
+		padding-left:2em;
+	}
+}
+#rateWrap {
+	border:3px double $medBlue;
+	margin-bottom:7em;
+	padding:1em;
+	text-align:center;
+	h2 {
+		font-size:2.5em;
+		margin:0.4em 0 0.8em;
+		color:$medBlue;
+	}
+	h3 {
+		font-size:1.5em;
+		margin:0;
+	}
+	p {
+		text-align:left;
+		margin:1em 0;
+	}
+	a {
+		font-size:1.2em;
+	}
+}
+body.pricing {
+	h3 {
+		margin-top:4em;
+	}
+	#chart-0 {
+		margin:-3em 0 0 -2em;
+	}
+}
+/******** EXPERIENCE ********/
+body.experience {
+	p {
+		width:450px;
+	}
+	p.caption {
+		width:100%;
+	}
+}
+#resumeLink {
+	text-align:center;
+}
+.exTop {
+	.buttWrap {
+		float:right;
+		padding:2em 3.7em 6em 0;
+	}
+	img {
+		clear:right;
+		float:right;
+	}
+	p {
+		width:450px;
+	}
+}
+#success {
+	margin:0 auto;
+	overflow:hidden;
+	width:701px;
+	h1 {
+		text-align:center;
+	}
+	div {
+		float:left;
+	}
+	p.caption {
+		clear:both;
+		font-size:0.9em;
+		margin-left:4em;
+	}
+}
+#totRais {
+	height:250px;
+	text-align:center;
+	width:350px;
+	h2 {
+		color:$medBlue;
+		font-size:3em;
+	}
+	h3 {
+		font:bold 1.2em arial, sans-serif;
+		margin:1em 0;
+	}
+}
+/******** CONTACT ********/
+#contactHead {
+	float:left;
+	margin:1em 1em 1em 0;
+}
+#contTop {
+	text-align:center;
+	.buttWrap {
+		margin:0 0 2em 30.5em;
+	}
+}
+.logos {
+	text-align:center;
+	img {
+		border:none;
+		margin:1em 1em 0em;
+	}
+}
+/******** FOOTER ********/
+footer {
+	background-color:$lightest;
+	border-top:$headFootBordW solid $medBlue;
+	font:16px Georgia, serif;
+	overflow:hidden;
+	padding:2em 0 3em;
+	width:100%;
+	div.vcard {
+		margin:3em;
+	}
+	.footerLogo {
+		margin:0 4.3em 0 0;
+		float:right;
+	}
+	.r, .c {
+		font-size:2.6em;
+		margin-top:2em;
+		position:absolute;
+	}
+	.r {
+		right:2em;
+	}
+	.c {
+		right:1em;
+	}
+}
+
+/* GENERIC */
+.arrowDown:after, .arrowUp:after {
+	bottom:0;
+	content: "";
+	height: 0;
+	left:-0.8em;
+	position: absolute;
+	top:0.3em;
+	width: 0;
+}
+.arrowDown:after {
+	border-top:0.5em solid $medBlue;
+	border-right:0.25em solid transparent;
+	border-left:0.25em solid transparent;
+}
+.arrowUp:after {
+	border-top:0.25em solid transparent;
+	border-bottom:0.25em solid transparent;
+	border-left:0.5em solid $medBlue;
+}
+.attriName:before {
+	content:"~ ";
+}
+blockquote:before {
+	content: open-quote;
+	font-weight:bold;
+}
+blockquote:after {
+	content: close-quote;
+	font-weight:bold;
+}
+.bold {
+	font-weight:bold;
+}
+.button {
+	background-color:#FFF;
+	border-radius:1em;
+	border-top:2px solid $lightBlue;
+	border-right:2px solid $darkBlue;
+	border-bottom:2px solid $darkBlue;
+	border-left:2px solid $lightBlue;
+	margin:2em 0;
+	padding:1em;
+	text-align:center;
+}
+.button:hover {
+	background-color:white;
+	border-radius:1em;
+	border-top:2px solid $darkBlue;
+	border-right:2px solid $lightBlue;
+	border-bottom:2px solid $lightBlue;
+	border-left:2px solid $darkBlue;
+	color:$darkBlue;
+	padding:1em;
+	text-decoration:none;
+}
+.buttWrap {
+	padding:2em;
+	text-align:center;
+}
+.caption {
+	font-style:italic;
+}
+.center {
+	text-align:center;
+}
+.underline {
+	text-decoration: underline;
+}
+.clear {
+	clear:both;
+}
+.main {
+	width:450px;
+}
+.noInd {
+	text-indent:0;
+}
+.pad {
+	padding:1em;
+}
+.padTop {
+	padding:2em;
+}
+.seoHide {
+	left:-999em;
+	position:absolute;
+}
