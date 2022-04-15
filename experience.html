@@ -1,11 +1,45 @@
-<?php include 'inserts/header.php' ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Ryland Consulting LLC - Grant Writing</title>
+	<meta name="author" content="Fitzhugh Ryland">
+	<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-37189325-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body class="experience">
+	<div id="headWrap">
+		<header>
+			<img class="logo" src="images/RClogoDraftTwo_3.gif" width="47" height="180" alt="RClogoDraftTwo 2">
+			<h1 class="r"><a href="index.html">Ryland</a></h1>
+			<h1 class="c"><a href="index.html">Consulting LLC</a></h1>
+			<div class="tagline">
+				Your in-house grant</br>writer when you need one.
+			</div>
+			<nav>
+				<a class="home" href="index.html">Home</a>
+				<a class="values" href="values.html">Values</a>
+				<a class="pricing" href="pricing.html">Pricing</a>
+				<a class="experience current" href="experience.html">Experience</a>
+				<a class="contact" href="contact.html">Contact</a>
+			</nav>
+		</header>
+	</div><!--#headWrap-->
+	<section>
+		<div id="secWrap">
 <div class="exTop">
 	<div class="buttWrap"><a class="button" href="http://www.linkedin.com/in/williamryland" target="_new">William Ryland's LinkedIn</a></div>
 	<img src="images/IMG_9440_2.jpg" width="300" height="200" alt="William at work.">
-
-
-
-
 	<p>I am William Ryland, the founder and sole member of Ryland Consulting. When you hire Ryland Consulting, I will personally work with you.</p>
 
 	<p>Since graduating from Tulane University with <span class="caption">Cum laude</span> honors in English, I have devoted myself to raising funds for worthy non-profit agencies across the country. Fresh out of college, as an in-house grant writer for a small local organization, I was able to increase annual grant revenue by over 50% in two years.</p>
@@ -34,15 +68,15 @@
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Ane9QvN61ScQdG05VTNSNnlNR2FnMURxQ2ZPejFNOEE&transpose=0&headers=1&range=B6%3AC8&gid=3&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"vAxes":[{"useFormatFromData":true,"title":"Left vertical axis title","minValue":null,"viewWindowMode":"pretty","viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindowMode":"pretty","viewWindow":{"min":null,"max":null},"maxValue":null}],"pieHole":0,"booleanRole":"certainty","title":"Government Proposals","animation":{"duration":0},"colors":["#3C4FCD","#6781FF","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"is3D":true,"hAxis":{"useFormatFromData":true,"title":"Horizontal axis title","minValue":null,"viewWindowMode":"pretty","viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{},"width":350,"height":250},"state":{},"view":{},"chartType":"PieChart","chartName":"Chart 13"} </script>
 
-
-
-<?php
-$curDate = date('Y-m-d');
-$dateTime = new DateTime($curDate);
-$dateTime->modify('last Monday');
-echo "<p class=\"caption\">Updated on " . $dateTime->format('m/d/Y') . "</p>";
-?>
-
+<p class="caption">Updated on <span id="js-updated_date"></span></p>
+<script>
+	var prevMonday = new Date();
+	prevMonday.setDate(prevMonday.getDate() - (prevMonday.getDay() + 6) % 7);
+	var dateString = (prevMonday.getMonth() + 1 ) + '/' + prevMonday.getDate() + '/' + prevMonday.getFullYear()
+	console.log('js-updated_date')
+	console.log(document.getElementById('js-updated_date'))
+	document.getElementById('js-updated_date').innerHTML = dateString
+</script>
 
 </div>
 
@@ -52,4 +86,36 @@ echo "<p class=\"caption\">Updated on " . $dateTime->format('m/d/Y') . "</p>";
 
 <p class="caption">Still, I present these charts as an accurate record of my past work, <span class="underline">not</span> as a promise of future results. We will approach the process thoroughly, but in the end, we will not have control over every variable.</p>
 
-<?php include 'inserts/footer.php' ?>
+	</div>
+</section>
+<footer>
+	<img class="footerLogo" src="images/ryeOnly_6.gif" width="39" height="165" alt="Ryland Consulting Logo">
+	<span class="r">R</span>
+	<span class="c">C</span>
+	<div id="hcard-William-Ryland" class="vcard">
+		<span class="fn">William Ryland</span>
+		<div class="org">Ryland Consulting LLC</div>
+		<a class="email" href="mailto:william@rylandconsulting.com">William@RylandConsulting.com</a>
+		<div class="adr">
+			<div class="street-address">1817 Oak Street, Unit B</div>
+			<span class="locality">San Francisco</span>,
+			<span class="region">CA</span>
+			<span class="postal-code">94117</span>
+		</div>
+		<div class="tel">(415) 676-7464</div>
+	</div>
+</footer>
+</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-37189325-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
